@@ -1174,8 +1174,8 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <button id="themeToggle" class="btn-outline" style="padding:8px 14px;font-size:0.8rem;">
-  🌙
-</button>
+          🌙
+        </button>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -1251,7 +1251,8 @@
               developer — bridging the gap between beautiful frontends and powerful backends.</p>
             <p>I've shipped real projects: a <strong>full E-Commerce platform</strong> integrated with a live API, and a
               <strong>professional admin dashboard</strong> for a UK-based client. Every project is a chance to grow,
-              learn, and deliver something I'm proud of.</p>
+              learn, and deliver something I'm proud of.
+            </p>
           </div>
         </div>
         <div class="about-stats">
@@ -1378,7 +1379,7 @@
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M7 17L17 7M7 7h10v10" />
                 </svg></a>
-              <span style="font-size:0.78rem;color:var(--muted)">Real client project 🇬🇧</span>
+              <span style="font-size:0.78rem;color:var(--muted)">Real client project</span>
             </div>
           </div>
         </div>
@@ -1457,12 +1458,6 @@
                 </svg>
               </button>
               <div class="form-status" id="formStatus"></div>
-              <p class="emailjs-setup">
-                ⚙️ To activate the form: get your keys from <a href="https://emailjs.com"
-                  target="_blank">emailjs.com</a>
-                and replace <code>YOUR_PUBLIC_KEY</code>, <code>YOUR_SERVICE_ID</code>, <code>YOUR_TEMPLATE_ID</code> in
-                the script below.
-              </p>
             </form>
           </div>
 
@@ -1548,26 +1543,26 @@
     });
     const themeBtn = document.getElementById("themeToggle");
 
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("light-mode");
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
 
-  if (document.body.classList.contains("light-mode")) {
-    themeBtn.textContent = "☀️";
-    localStorage.setItem("theme", "light");
-  } else {
-    themeBtn.textContent = "🌙";
-    localStorage.setItem("theme", "dark");
-  }
-});
+      if (document.body.classList.contains("light-mode")) {
+        themeBtn.textContent = "☀️";
+        localStorage.setItem("theme", "light");
+      } else {
+        themeBtn.textContent = "🌙";
+        localStorage.setItem("theme", "dark");
+      }
+    });
 
-// حفظ الحالة
-window.addEventListener("load", () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-    themeBtn.textContent = "☀️";
-  }
-});
+    // حفظ الحالة
+    window.addEventListener("load", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+        themeBtn.textContent = "☀️";
+      }
+    });
   </script>
 </body>
 
